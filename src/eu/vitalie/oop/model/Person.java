@@ -8,7 +8,7 @@ public class Person {
     private  String name;
     private final String surname;
     private final int age;
-    private final int trustLevel;
+    protected  int trustLevel;
 
 
 
@@ -42,5 +42,19 @@ public class Person {
 
     public boolean isTrusted() {
         return this.trustLevel > MINIMUM_TRUST_LEVEL;
+    }
+
+    @Override
+    public String toString() {
+        return "Person{" +
+                "name='" + name + '\'' +
+                ", surname='" + surname + '\'' +
+                ", age=" + age +
+                ", trustLevel=" + trustLevel +
+                '}';
+    }
+
+    public void doSomething() {
+        System.out.println("this is Person action");
     }
 }
